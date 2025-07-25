@@ -9,12 +9,9 @@ Route::get('/', function () {
     return view('home', ['title' => 'Blog', 'posts' => Post::all()]);
 });
 
-Route::get('/{slug}', function ($slug) {
+Route::get('/{post:slug}', function (Post $post) {
 
-    $post = Post::findBySlug($slug);
-
-    return view('post', [
-        'title' => $post['title'],
-        'post' => $post
+    return view('post', ['title' => $post['title'],'post' => $post
     ]);
 });
+
