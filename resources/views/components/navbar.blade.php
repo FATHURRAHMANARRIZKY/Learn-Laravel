@@ -9,7 +9,7 @@
             </div>
             <div class="hidden md:flex justify-center flex-1">
                 <div class="flex items-baseline space-x-4">
-                    <x-nav-link href="https://www.f21.my.id/" :active="request()->is('home')">Home</x-nav-link>
+                    <x-nav-link href="/" :active="request()->is('home')">Home</x-nav-link>
                     <x-nav-link href="/" :active="request()->is('about')">About</x-nav-link>
                     <x-nav-link href="/" :active="request()->is('projects')">Projects</x-nav-link>
                     <x-nav-link href="/" :active="request()->is('/')">Blog</x-nav-link>
