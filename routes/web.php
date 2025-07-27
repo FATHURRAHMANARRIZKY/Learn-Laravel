@@ -8,9 +8,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    // $posts = Post::with(['author', 'category'])->latest()->get();
-    $posts = Post::latest()->get();
-    return view('home', ['title' => 'Blog', 'posts' => $posts]);
+    return view('home', ['title' => 'Blog', 'posts' => Post::filter(request(['search', 'category', 'author']))->latest()->paginate(9)->withQueryString()
+    ]);
 });
 
 Route::get('/{post:slug}', function (Post $post) {
