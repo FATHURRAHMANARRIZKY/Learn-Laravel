@@ -63,7 +63,7 @@
                         </a>
                         <a href="/{{ $post->slug }}"
                             class="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                            Read more
+                            Read more..
                             <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
